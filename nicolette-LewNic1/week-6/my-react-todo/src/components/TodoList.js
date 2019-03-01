@@ -6,7 +6,10 @@ class TodosList extends Component {
 
     let todos = this.props.todos.map( (todo) => {
       return (
-        <Todo key={ todo._id } todo={ todo }/>
+        <Todo 
+        key={ todo._id } 
+        todo={ todo }
+        deleteTodo={ this.props.deleteTodo } />
       )
     })
 
@@ -14,7 +17,7 @@ class TodosList extends Component {
       <ul>
         { todos }
       </ul>
-    )
+    );
     
   }
 }
